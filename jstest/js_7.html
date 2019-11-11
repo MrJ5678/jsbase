@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
+    <!-- <script>
         function yideng() {
             console.log(1);
         }
@@ -19,6 +19,23 @@
             }
             yideng();
         })();
-    </script>
+    </script> -->
+    <!-- 100 100-90/10 = 1
+        100-99/10 = 0.1
+        100-98/10 = 0.2
+        ...
+        100-91/10 = 0.9
+        100-80/10 = 2 
+        100-81/10 = 1.9
+        ...
+        100-89/10 = 1.1 -->
+        <script>
+            function cal(score) {
+                let result = Math.ceil((100 - score) / 10)
+                console.log(`学生成绩等级为:${result}等生`)
+            }
+            cal(90);
+        </script>
+        
 </body>
 </html>
