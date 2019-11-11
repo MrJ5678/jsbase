@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Car(color) {
+            this.color = color;
+        }
+        Car.prototype.show = function () {
+            console.log(this.color);
+        }
+        function BMW(color) {
+            Car.call(this, color)
+        }
+        BMW.prototype = Object.create(Car.prototype);
+        BMW.prototype.construtor = BMW;
+        BMW.prototype.test = function () { };
+        const bmw = new BMW('red');
+        console.log(bmw)
+    </script>
+</body>
+
+</html>
